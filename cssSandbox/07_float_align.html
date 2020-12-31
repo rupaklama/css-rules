@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float & Align</title>
+
+    <style>
+      * {
+        /* NOTE: The box-sizing property allows us to include the padding and border in an element's total width and height
+          If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+        */
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+      }
+
+      .container {
+        /* NOTE: max-width is to make width responsive which stops at 960px
+        ALWAYS use max-width with Containers */
+        max-width: 960px;
+
+        /* to move content/element in center */
+        margin: 30px auto;
+      }
+
+      /* to clear when using floating */
+      .clr {
+        clear: both;
+      }
+
+      .box {
+        background: #f4f4f4;
+        border: 1px solid #333;
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      .box p {
+        /* Text Align by default to left */
+        /* justify - even side edges */
+        text-align: justify;
+      }
+
+      #box-2 {
+        float: left;
+        /* Must need to add Width with float */
+        width: 68%;
+      }
+
+      #box-3 {
+        float: right;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NOTE: You want to use modern way of styling with Flex Box & CSS Grid instead of FLOAT-->
+
+    <div class="container">
+      <div id="box-1" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore
+          veniam accusamus ipsum eos incidunt itaque perferendis tempore, nulla
+          veritatis!
+        </p>
+      </div>
+
+      <div id="box-2" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore
+          veniam accusamus ipsum eos incidunt itaque perferendis tempore, nulla
+          veritatis!
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore
+          veniam accusamus ipsum eos incidunt itaque perferendis tempore, nulla
+          veritatis!
+        </p>
+      </div>
+
+      <div class="clr"></div>
+
+      <div id="box-4" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore
+          veniam accusamus ipsum eos incidunt itaque perferendis tempore, nulla
+          veritatis!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
