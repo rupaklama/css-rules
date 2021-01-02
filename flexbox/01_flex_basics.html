@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Basics</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .flex-container {
+        /* Horizontal Alignment by default, making flex direction to be ROW */
+        display: flex;
+        /* flex-wrap property specifies whether the flex items should wrap or not */
+        flex-wrap: wrap;
+      }
+
+      .item {
+        background: #f4f4f4;
+        border: 2px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+
+        /* flex item properties */
+        /* flex-basis property is kind a like setting WIDTH of an item */
+        /* flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties */
+        flex: 1 0 200px;
+        /* flex-grow: 1 - fill up available space, 
+          flex-shrink: 0 - don't shrink & 
+          flex-basis: 200px - set width to minimum of 200px */
+      }
+
+      .item-3 {
+        flex: 2;
+      }
+
+      
+      /* flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items. */
+      /* flex-shrink: 0 - don't shrink at all */
+      /* .item-1 {
+        flex-shrink: 0;
+      } */
+
+      /*  flex-grow property specifies how much a flex item will grow relative to the rest of the flex items. 
+            The value must be a number, default value is 0.
+            NOTE: This will FILL UP the remaining space of the container */
+
+      /* flex-basis property is kind a like setting WIDTH of an item */
+      /* .item-2 {
+        flex-grow: 1;
+
+        flex-basis: 0;
+      } */
+
+      /*  item grow TWO times faster than the other flex items */
+      /* .item-3 {
+        flex-grow: 2;
+        flex-basis: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item item-1">
+        <h3>Item 1</h3>
+      </div>
+      <div class="item item-2">
+        <h3>Item 2</h3>
+      </div>
+      <div class="item item-3">
+        <h3>Item 3</h3>
+      </div>
+    </div>
+  </body>
+</html>
