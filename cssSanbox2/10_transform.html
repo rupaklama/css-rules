@@ -12,12 +12,19 @@
       justify-content: center;
       height: 100vh;
     }
+    
+    /* The transform property applies a 2D or 3D transformation to an element. 
+    This property allows you to rotate, scale, move, skew, etc., elements.     */
 
     .box {
       background: white;
       width: 300px;
       height: 300px;
+      
+      /* To rotate elment into a certain angle */
       /* transform: rotate(25deg); */
+      
+      /*  skew element diagonally      */
       /* transform: skew(25deg); */
 
       /* scale is to increase the size, 2 is doubling up */
@@ -36,6 +43,9 @@
       transform: translateY(100px);
       transform: translateX(-100px);
       transform: translate(100px, 100px);
+      
+      /* translate3d- to boost performance */
+      transform: translate3d(100px, 100px, 100px); 
     }
   </style>
 </head>
