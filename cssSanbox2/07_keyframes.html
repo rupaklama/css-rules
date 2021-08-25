@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes</title>
+
+  <style>
+    body  {
+      background: #333;
+    }
+
+    .box {
+      background: white;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      /* we have to create keyframe - animate1 */
+      animation-name: animate1;
+      
+      /* time to extend to 600px */
+      animation-duration: 5s;
+      
+      /* repeat infinite times */
+      /* animation-iteration-count: infinite; */
+      /* default repetition count is set to 1, set to 2 to repeat twice*/
+      animation-iteration-count: 2; 
+      
+      /* stay at the end of animation - 600px, don't go back to initial start */
+      animation-fill-mode: forwards;
+      
+      /* delay the start of the animation */
+      /* animation-delay: 2s; */
+      
+      /* reverse or backward effect */
+      /* animation-direction: alternate-reverse; */
+
+      /* the motion - animation speed, timing function */
+      /* ease-in: start slow & move faster */
+      /* ease-in-out: start our slow then move faster & end slow */
+      animation-timing-function: ease-in-out;
+
+      /* NOTE: we can do all above with ONE property */
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    }
+
+    /* we can basically specify points in the animation */
+    @keyframes animate1 {
+    /* we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)) */
+      from {
+        width: 200px;
+        top: 0;
+      }
+
+      to {
+        width: 600px;
+        background: red;
+        top: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  
+</body>
+</html>
