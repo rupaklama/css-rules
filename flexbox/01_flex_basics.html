@@ -18,7 +18,7 @@
         /* Horizontal Alignment by default, making flex direction to be ROW */
         display: flex;
         /* flex-wrap property specifies whether the flex items should wrap or not */
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
       }
 
       .item {
@@ -28,21 +28,22 @@
         padding: 10px;
         text-align: center;
         border-radius: 10px;
+        flex: 1 0 200px;
 
         /* flex item properties */
         /* flex-basis property is kind a like setting WIDTH of an item */
         /* flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties */
-        flex: 1 0 200px;
+        /* flex: 1 0 200px; */
         /* flex-grow: 1 - fill up available space, 
           flex-shrink: 0 - don't shrink & 
           flex-basis: 200px - set width to minimum of 200px */
       }
 
       .item-3 {
+        /* double than others */
         flex: 2;
       }
 
-      
       /* flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items. */
       /* flex-shrink: 0 - don't shrink at all */
       /* .item-1 {
@@ -51,7 +52,7 @@
 
       /*  flex-grow property specifies how much a flex item will grow relative to the rest of the flex items. 
             The value must be a number, default value is 0.
-            NOTE: This will FILL UP the remaining space of the container */
+            NOTE: This will FILL UP / Stretch on the remaining space of the container */
 
       /* flex-basis property is kind a like setting WIDTH of an item */
       /* .item-2 {
