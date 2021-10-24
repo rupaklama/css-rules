@@ -15,7 +15,8 @@
       }
 
       img {
-        /* we can't do margin auto or add marging on inline element. Displaying as block will help us to add padding too */
+        /* Inline Elements don't have room for padding/margin & padding/margin gets ignored, 
+        therefore needs to display as block or inline-block */
         display: block;
         margin: auto;
       }
