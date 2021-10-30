@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vh & Vw Units</title>
+
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+      }
+
+      header {
+        /* note - we can have background color & image on top of it at the same time */
+        background: rgb(51, 51, 51, 0.2) url('https://source.unsplash.com/daily') no-repeat center
+          center/cover;
+        color: #fff;
+
+        /* height to be the full screen viewport height */
+        height: 100vh;
+        /* width: 50vw; */
+
+        text-align: center;
+        padding: 2rem;
+        padding-top: 15rem;
+      }
+
+      header h1 {
+        font-size: 3rem;
+      }
+
+      header p {
+        margin: 1rem 0;
+      }
+
+      header .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #fff;
+        color: #333;
+        padding: 0.75rem 2rem;
+      }
+
+      section {
+        padding: 2rem;
+      }
+
+      @media (max-height: 450px) {
+        header {
+          padding-top: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to our Website</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nulla tempore beatae, illum voluptatibus
+        rerum.
+      </p>
+
+      <a href="#" class="btn">Find Out More</a>
+    </header>
+
+    <section>
+      <h3>About Our Company</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, at amet inventore accusantium
+        provident vitae porro fugiat et possimus odio sequi dolor cumque voluptas labore sit officiis illum
+        architecto corrupti placeat quisquam, blanditiis exercitationem earum distinctio? Perferendis
+        quibusdam id labore, fugit quaerat, molestiae suscipit laborum reiciendis eum molestias mollitia enim.
+      </p>
+    </section>
+  </body>
+</html>
