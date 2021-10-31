@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before & After</title>
+
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+        background: #333;
+        color: #fff;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        height: 100vh;
+      }
+
+      header > h1 {
+        font-size: 4rem;
+        margin: 1rem;
+        padding: 1rem;
+      }
+
+      /* Practical uses */
+
+      /* inserting '*' an element through CSS after 'label' element with a Single Class
+          instead of adding it directly on every html elements - good practice */
+      .is-required::after {
+        content: '*';
+        color: #ff0000;
+        padding-left: 0.2rem;
+      }
+
+      /* :before is commonly use for Image Overlay to fade out the background */
+      header::before {
+        /* note - need too provide 'content' prop when using after/before selector */
+        content: '';
+        background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+        opacity: 0.4;
+
+        /* Image won't display without positioning & adding width/height */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        /* pushing image behind header */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <label class="is-required" for="name">Name</label>
+    <input type="text" id="name" />
+
+    <br /><br />
+    <label class="is-required" for="email">Email</label>
+    <input type="email" id="email" /> -->
+
+    <header>
+      <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quibusdam.</p>
+    </header>
+
+    <section>
+      <h3>Lorem ipsum dolor sit amet.</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque fuga, natus, voluptates numquam
+        deserunt ipsum, nobis sunt nisi minus magni temporibus ducimus accusamus. Qui nam nostrum facilis ut,
+        tempora explicabo.
+      </p>
+    </section>
+  </body>
+</html>
