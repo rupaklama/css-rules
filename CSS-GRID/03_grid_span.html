@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Span</title>
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+        /* margin: 0;
+        padding: 0; */
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .item {
+        padding: 3rem;
+        border: 0.1rem solid #ccc;
+        background: #f4f4f4;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* grid span - to take other columns & rows to expand across up & down*/
+      .item:first-child {
+        /* Place a grid item at column line 1, and let it end on column line 3: */
+        /* on which column line to start with */
+        /* grid-column-start: 1; */
+        /* on which column to line end the spanning across*/
+        /* grid-column-end: 4; */
+
+        /* row lines */
+        /* grid-row-start: 1;
+        grid-row-end: 3; */
+
+        /* same as above - short cut */
+        /* Place a grid item at column line 1, and let it end on column line 4: */
+        /* 1 - start at column 1 & span all the way across to column 3 */
+        grid-column: 1 / span 3;
+
+        /* start at row 1 & span all the way down to row 2  */
+        grid-row: 1 / span 2;
+      }
+      .item:nth-child(9) {
+        grid-column: 2 / span 3;
+        grid-row: 4 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+      <div class="item">Item 11</div>
+      <div class="item">Item 12</div>
+      <div class="item">Item 13</div>
+      <div class="item">Item 14</div>
+      <div class="item">Item 15</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Columns</title>
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+        /* margin: 0;
+        padding: 0; */
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+      }
+
+      /* parent */
+      .grid {
+        display: grid;
+        /* grid-template-columns: 200px auto 200px; */
+        /* grid-template-columns: auto auto auto; */
+
+        /* same as above - 3 Columns with Same Width  */
+        /* grid-template-columns: repeat(3, auto); */
+
+        /* note - fr (fraction) is the common unit in grid */
+        grid-template-columns: 1fr 2fr 1fr;
+        /* grid-gap property can also be used to set both the row gap and the column gap in one value */
+        grid-gap: 1rem;
+      }
+
+      /* children */
+      .item {
+        padding: 3rem;
+        border: 0.1rem solid #ccc;
+        background: #f4f4f4;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      /* parent */
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+
+    <main>
+      <section>
+        <h3>Welcome to my site</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eveniet nesciunt aliquam aut,
+          voluptate placeat est itaque dolorum quasi, veritatis nemo consequuntur nam, distinctio facilis
+          necessitatibus expedita at assumenda libero.
+        </p>
+      </section>
+
+      <aside>
+        <h3>Hello</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptatibus!</p>
+      </aside>
+    </main>
+  </body>
+</html>
