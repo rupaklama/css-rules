@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Float & Align</title>
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+        /* margin: 0;
+        padding: 0; */
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.4em;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 10px auto;
+      }
+
+      .box {
+        background-color: #f4f4f4;
+        border: 1px solid #333;
+        margin: 0 0 15px;
+        padding: 20px;
+      }
+
+      .box p {
+        text-align: justify;
+      }
+
+      .box h3 {
+        text-align: center;
+      }
+
+      /* float property specifies whether an element should float to the left, right, or not at all,
+
+        float: none|left|right|initial|inherit;
+
+        Note: Absolutely positioned elements ignore the float property!
+        Note: To include padding & border, must set box-sizing: border-box; 
+
+        Note: Elements next to a floating element will flow around it. To avoid this, use the clear property or the clearfix hack.
+
+        note - Do not allow floating elements on the left or the right side of a specified <p> element
+          p.clear {
+            clear: both;
+          }
+      */
+      #box-2 {
+        float: left;
+        /* note - you want to add 'width' when floating something, otherwise changes will not reflect */
+        /* 2% is left for 'margin' */
+        width: 68%;
+      }
+
+      #box-3 {
+        float: right;
+        width: 30%;
+      }
+
+      /* to clear from above floated elements */
+      #box-4 {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="box-1" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quae harum similique, voluptatem
+          odit magnam ea voluptatibus veritatis omnis eius!
+        </p>
+      </div>
+      <div id="box-2" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quae harum similique, voluptatem
+          odit magnam ea voluptatibus veritatis omnis eius!
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quae harum similique, voluptatem
+          odit magnam ea voluptatibus veritatis omnis eius!
+        </p>
+      </div>
+
+      <div id="box-4" class="box">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae quae harum similique, voluptatem
+          odit magnam ea voluptatibus veritatis omnis eius!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
