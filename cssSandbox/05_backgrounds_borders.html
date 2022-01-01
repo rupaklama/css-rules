@@ -21,6 +21,24 @@
         border-top: 3px solid blue;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        
+        max-width: 600px;
+        min-height: 300px;
+
+        
+        /* NOTE -  The max-width, min-width, max-height, and min-height properties
+          is to adjust the size of elements for responsiveness without needing to use media queries.
+          max-width: maximum width of an element, will shrink on smaller widths for responsiveness
+          min-width: minimum width of an element, will not shrink below smaller widths than set
+
+          max-height: maximum height of an element, will not grow/shrink more than set height.
+          NOTE - When shrink all the way down to smaller screen, height is consistent to the set height. 
+          If content is large then it will overflow. Not enough height to fit all the content. 
+
+          min-height: minimum height of an element, will not grow more than set height.
+          NOTE - When shrink all the way down to smaller screen, height is not consistent to set height 
+          & will be responsive to fit the content. 
+        */
       }
 
       #box-3 {
@@ -42,6 +60,7 @@
         /* background: url('./img/stars.jpg') no-repeat center center/cover;  
         
         NOTE - center/80% - to cover 80% of the container */
+        
 
         color: #fff;
         height: 300px;
