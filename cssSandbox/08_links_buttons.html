@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Links & Buttons</title>
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+      }
+
+      /* link color is blue by default */
+      a {
+        color: #333;
+
+        /* underline by default */
+        text-decoration: none;
+      }
+
+      /* pseudo classes/selectors */
+      a:hover {
+        color: coral;
+        font-size: 4rem;
+      }
+
+      /* a:visited {
+        color: green;
+      } */
+
+      /* on click, also on click & hold */
+      a:active {
+        color: #ff0000;
+      }
+
+      /* Button Styling */
+      .btn {
+        background-color: #4c6ca0;
+        color: #fff;
+        border: none;
+        font-size: 1.6rem;
+        padding: 10px 20px;
+        border-radius: 0.5rem;
+
+        /* button don't have Mouser Pointer by default */
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #446190;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <a class="btn" href="#">My Link</a>
+    <br />
+    <br />
+    <br />
+    <button class="btn">Click Me</button>
+  </body>
+</html>
