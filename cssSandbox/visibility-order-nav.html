@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility, Order & Negative Margin</title>
+
+    <style>
+      /* CSS Reset */
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        /* over-riding default font size to 10px instead of default - 16px for easy calculation */
+        font-size: 10px;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.6rem;
+      }
+
+      /* Visibility */
+      h1 {
+        /* to remove an element & can be very useful to not to show elements on screen sizes */
+        /* display: none; */
+
+        /* this is to hide an element but it still takes up the space */
+        visibility: hidden;
+      }
+
+      /* Order of precedence & 'important' flag */
+      h2 {
+        /* !important flag is to always override with the given value to take the precedence */
+        color: blue !important;
+        /* bottom styling property takes precedence normally */
+        /* note - this don't apply to Class/Id Selectors which have higher precedence than normal selectors' */
+        color: red;
+      }
+
+      /* Negative Margin - We can still apply it but always try to avoid it if possible */
+      /* note - This only works with Margin but not with Padding since it is inside of border */
+      h2 {
+        margin-top: -30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nihil odit mollitia, quia esse
+      earum!
+    </p>
+
+    <h2>Hello, again</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nihil odit mollitia, quia esse
+      earum!
+    </p>
+  </body>
+</html>
